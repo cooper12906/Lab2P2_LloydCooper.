@@ -113,8 +113,9 @@ public class Lab2P2_LloydCooper {
             String estiloPintura = scanner.nextLine();
             System.out.print("Color predominante: ");
             String colorPintura = scanner.nextLine();
-            Pinturas nuevaPintura = new Pinturas(nombrePintura, autorPintura, tecnicaPintura, dimensionesPintura,
-            precioPintura, fechaCreacionPintura, estiloPintura, colorPintura);
+            Pinturas nuevaPintura = new Pinturas(nombrePintura, autorPintura, fechaPresentacionPintura, fechaAdquisicionPintura,
+        enExposicionPintura, precioPintura, fechaCreacionPintura, estiloPintura, colorPintura);
+
             listaPinturas.add(nuevaPintura);
             System.out.println("Pintura creada con éxito.");
             break;
@@ -245,13 +246,13 @@ public class Lab2P2_LloydCooper {
             // Eliminar escrito
             System.out.println("Escritos disponibles:");
             for (Escritos escrito : listaEscritos) {
-                System.out.println("- " + escrito.getNombre() + " de " + escrito.getAutor());
+                System.out.println("- " + escrito.getAutor() + " de " + escrito.getAutor());
             }
             System.out.print("Ingrese el nombre del escrito a eliminar: ");
             String nombreEscritoEliminar = scanner.nextLine();
             boolean encontrado = false;
             for (Escritos escrito : listaEscritos) {
-                if (escrito.getNombre().equals(nombreEscritoEliminar)) {
+                if (escrito.getAutor().equals(nombreEscritoEliminar)) {
                     listaEscritos.remove(escrito);
                     System.out.println("Escrito eliminado exitosamente.");
                     encontrado = true;

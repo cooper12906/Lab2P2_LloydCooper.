@@ -8,15 +8,24 @@ public class Pinturas {
     private String fechaPresentacion;
     private String fechaAdquisicion;
     private boolean enExposicion;
+    private final String color;
+    private final String estilo;
+    private final String fechaCreacion;
+    private final double precio;
     
     // Constructor
-    public Pinturas (String nombre, String autor, String fechaPresentacion, String fechaAdquisicion, boolean enExposicion) {
-        this.nombre = nombre;
-        this.autor = autor;
-        this.fechaPresentacion = fechaPresentacion;
-        this.fechaAdquisicion = fechaAdquisicion;
-        this.enExposicion = enExposicion;
-    }
+    public Pinturas(String nombre, String autor, String fechaPresentacion, String fechaAdquisicion, boolean enExposicion, 
+        double precio, String fechaCreacion, String estilo, String color) {
+    this.nombre = nombre;
+    this.autor = autor;
+    this.fechaPresentacion = fechaPresentacion;
+    this.fechaAdquisicion = fechaAdquisicion;
+    this.enExposicion = enExposicion;
+    this.precio = precio;
+    this.fechaCreacion = fechaCreacion;
+    this.estilo = estilo;
+    this.color = color;
+}
     
     // Getters y Setters
     public String getNombre() {
