@@ -6,9 +6,9 @@ public class Escritos {
     private String generoLiterario;
     private String autor;
 
-    public Escritos(int totalPalabras, String epocaRedaccion, String generoLiterario, String autor) {
+    public Escritos(String nombre, String autor, int totalPalabras, int anoPublicacion, String generoLiterario) {
         this.totalPalabras = totalPalabras;
-        this.epocaRedaccion = epocaRedaccion;
+        this.epocaRedaccion = Integer.toString(anoPublicacion);
         this.generoLiterario = generoLiterario;
         this.autor = autor;
     }
@@ -45,4 +45,5 @@ public class Escritos {
         this.autor = autor;
     }
 }
+
 

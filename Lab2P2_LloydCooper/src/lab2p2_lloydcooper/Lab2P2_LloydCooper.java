@@ -146,23 +146,31 @@ public class Lab2P2_LloydCooper {
             System.out.println("Escultura creada con éxito.");
             break;
             case 3:
-            System.out.print("Nombre: ");
-            String nombreFoto = scanner.nextLine();
-            System.out.print("Autor: ");
-            String autorFoto = scanner.nextLine();
-            System.out.print("Tamaño (KB): ");
-            double tamanoFoto = scanner.nextDouble();
-            scanner.nextLine();
-            System.out.print("Fecha de creación (DD/MM/AAAA): ");
-            String fechaCreacionFoto = scanner.nextLine();
-            System.out.print("Lugar donde se tomó: ");
-            String lugarFoto = scanner.nextLine();
-            System.out.print("Tema: ");
-            String temaFoto = scanner.nextLine();
-            Fotografias nuevaFoto = new Fotografias(nombreFoto, autorFoto, tamanoFoto, fechaCreacionFoto, lugarFoto,
-            temaFoto);
-            listaFotografias.add(nuevaFoto);
-            System.out.println("Fotografía creada con éxito.");
+                System.out.print("Nombre: ");
+                String nombreFoto = scanner.nextLine();
+                System.out.print("Autor: ");
+                String autorFoto = scanner.nextLine();
+                System.out.print("Tamaño (KB): ");
+                double tamanoFoto = scanner.nextDouble();
+                scanner.nextLine();
+                System.out.print("Fecha de creación (DD/MM/AAAA): ");
+                String fechaCreacionFoto = scanner.nextLine();
+                System.out.print("Lugar donde se tomó: ");
+                String lugarFoto = scanner.nextLine();
+                System.out.print("Tema: ");
+                String temaFoto = scanner.nextLine();
+                System.out.print("Dimensiones (ancho x alto): ");
+                String dimensionFoto = scanner.nextLine();
+                System.out.print("Resolución (en ppp): ");
+                String resolucionFoto = scanner.nextLine();
+                System.out.print("¿A color? (true/false): ");
+                boolean aColorFoto = scanner.nextBoolean();
+                scanner.nextLine();
+                Fotografias nuevaFoto = new Fotografias(dimensionFoto, resolucionFoto, aColorFoto, nombreFoto, autorFoto, tamanoFoto,
+                    fechaCreacionFoto, lugarFoto, temaFoto);
+
+                listaFotografias.add(nuevaFoto);
+                System.out.println("Fotografía creada con éxito.");
             break;
             case 4:
             System.out.print("Nombre: ");
