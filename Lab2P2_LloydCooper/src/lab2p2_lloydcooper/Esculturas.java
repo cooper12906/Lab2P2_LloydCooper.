@@ -5,13 +5,25 @@ public class Esculturas {
     private String material;
     private int anioComienzo;
     private String departamento;
+    private final String nombre;
+    private final String autor;
+    private final double precio;
+    private final String dimensiones;
+    private final String fechaCreacion;
+    private final String estilo;
+    private final double peso;
     
-    public Esculturas (String escultor, String material, int comienzoAnio, String departamento){
-        this.escultor = escultor;
-        this.material = material;
-        this.anioComienzo = anioComienzo;
-        this.departamento = departamento;
-    }
+    public Esculturas(String nombre, String autor, String material, String dimensiones, double precio, String fechaCreacion, String estilo, double peso) {
+    this.nombre = nombre;
+    this.autor = autor;
+    this.material = material;
+    this.dimensiones = dimensiones;
+    this.precio = precio;
+    this.fechaCreacion = fechaCreacion;
+    this.estilo = estilo;
+    this.peso = peso;
+}
+
     
     public String getEscultor(){
         return escultor;
