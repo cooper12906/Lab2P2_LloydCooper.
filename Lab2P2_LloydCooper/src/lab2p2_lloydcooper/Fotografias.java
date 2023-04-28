@@ -1,13 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package lab2p2_lloydcooper;
 
-/**
- *
- * @author CUSTOMER PC
- */
-public class Fotografias {
+    public class Fotografias {
+    private String dimension;
+    private String resolucion;
+    private boolean aColor;
+
+    public Fotografias (String dimension, String resolucion, boolean aColor) {
+        this.dimension = dimension;
+        this.resolucion = resolucion;
+        this.aColor = aColor;
+    }
+
+    public String getDimension() {
+        return dimension;
+    }
+
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
+    }
+
+    public String getResolucion() {
+        return resolucion;
+    }
+
+    public void setResolucion(String resolucion) {
+        this.resolucion = resolucion;
+    }
     
+    public boolean aColor(){
+        return aColor;
+    }
 }

@@ -1,13 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package lab2p2_lloydcooper;
 
-/**
- *
- * @author CUSTOMER PC
- */
 public class Usuario {
+    private String nombreUsuario;
+    private String contrasenia;
+    private boolean esAdministrativo;
     
+    // Constructor
+    public Usuario(String nombreUsuario, String contrasenia, boolean esAdministrativo) {
+        this.nombreUsuario = nombreUsuario;
+        this.contrasenia = contrasenia;
+        this.esAdministrativo = esAdministrativo;
+    }
+    
+    // Getters y Setters
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
+    public boolean isEsAdministrativo() {
+        return esAdministrativo;
+    }
+
+    public void setEsAdministrativo(boolean esAdministrativo) {
+        this.esAdministrativo = esAdministrativo;
+    }    
 }
+
