@@ -36,5 +36,10 @@ public class Usuario {
     public void setEsAdministrativo(boolean esAdministrativo) {
         this.esAdministrativo = esAdministrativo;
     }    
+    // Método para validar si el usuario actual es administrativo o no
+    public boolean isPersonalAdmin() {
+        return this.esAdministrativo;
+    }
+    
 }
 

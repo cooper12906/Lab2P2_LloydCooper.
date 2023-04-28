@@ -3,6 +3,7 @@ package lab2p2_lloydcooper;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Lab2P2_LloydCooper {
     private static ArrayList<Pinturas> listaPinturas = new ArrayList<>();
     private static ArrayList<Esculturas> listaEsculturas = new ArrayList<>();
@@ -39,7 +40,7 @@ public class Lab2P2_LloydCooper {
     
     private static Usuario iniciarSesion(String username, String password) {
         for (Usuario usuario : listaUsuarios) {
-            if (usuario.getNombreUsuario().equals(username) && usuario.getPassword().equals(password)) {
+            if (usuario.getNombreUsuario().equals(username) && usuario.getContrasenia().equals(password)) {
                 return usuario;
             }
         }
@@ -248,7 +249,21 @@ public class Lab2P2_LloydCooper {
             }
             System.out.print("Ingrese el nombre del escrito a eliminar: ");
             String nombreEscritoEliminar = scanner.nextLine();
+            boolean encontrado = false;
+            for (Escritos escrito : listaEscritos) {
+                if (escrito.getNombre().equals(nombreEscritoEliminar)) {
+                    listaEscritos.remove(escrito);
+                    System.out.println("Escrito eliminado exitosamente.");
+                    encontrado = true;
+                    break;
+                }
             }
+            if (!encontrado) {
+                System.out.println("El escrito ingresado no existe.");
+            }
+            break;
+            default:
+                System.out.println("Opción no válida. Seleccione otra opción.");
         }
     }
 }
