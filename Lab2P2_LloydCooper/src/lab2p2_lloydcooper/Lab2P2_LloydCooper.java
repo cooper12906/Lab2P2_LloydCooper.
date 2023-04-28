@@ -95,30 +95,32 @@ public class Lab2P2_LloydCooper {
         scanner.nextLine();
 
         switch (opcion) {
-            case 1:
-            System.out.print("Nombre: ");
+            case 1: // Crear pintura
+            System.out.print("Ingrese el nombre de la pintura: ");
             String nombrePintura = scanner.nextLine();
-            System.out.print("Autor: ");
+            System.out.print("Ingrese el autor de la pintura: ");
             String autorPintura = scanner.nextLine();
-            System.out.print("Técnica: ");
-            String tecnicaPintura = scanner.nextLine();
-            System.out.print("Dimensiones (alto x ancho): ");
-            String dimensionesPintura = scanner.nextLine();
-            System.out.print("Precio: ");
+            System.out.print("Ingrese la fecha de presentación de la pintura (dd/MM/yyyy): ");
+            String fechaPresentacionPintura = scanner.nextLine();
+            System.out.print("Ingrese la fecha de adquisición de la pintura (dd/MM/yyyy): ");
+            String fechaAdquisicionPintura = scanner.nextLine();
+            System.out.print("¿La pintura está en exposición? (true/false): ");
+            boolean enExposicionPintura = scanner.nextBoolean();
+            System.out.print("Ingrese el precio de la pintura: ");
             double precioPintura = scanner.nextDouble();
-            scanner.nextLine();
-            System.out.print("Fecha de creación (DD/MM/AAAA): ");
+            scanner.nextLine(); // Limpiar buffer
+            System.out.print("Ingrese la fecha de creación de la pintura (dd/MM/yyyy): ");
             String fechaCreacionPintura = scanner.nextLine();
-            System.out.print("Estilo: ");
+            System.out.print("Ingrese el estilo de la pintura: ");
             String estiloPintura = scanner.nextLine();
-            System.out.print("Color predominante: ");
+            System.out.print("Ingrese el color predominante de la pintura: ");
             String colorPintura = scanner.nextLine();
             Pinturas nuevaPintura = new Pinturas(nombrePintura, autorPintura, fechaPresentacionPintura, fechaAdquisicionPintura,
-        enExposicionPintura, precioPintura, fechaCreacionPintura, estiloPintura, colorPintura);
-
+                    enExposicionPintura, precioPintura, fechaCreacionPintura, estiloPintura, colorPintura);
             listaPinturas.add(nuevaPintura);
-            System.out.println("Pintura creada con éxito.");
+            System.out.println("Pintura creada exitosamente.");
             break;
+
             case 2:
             System.out.print("Nombre: ");
             String nombreEscultura = scanner.nextLine();
